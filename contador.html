@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contador de dias</title>
+</head>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    body{
+    background-image: linear-gradient(to right,rgb(119, 117, 117),rgb(223, 223, 223));
+    } 
+    .card{
+        position: relative;
+        right: -39%;
+        top: 100px;
+        
+    }
+    .key{
+    font-size: 25px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    border: 1px 1px;
+    border-style: solid;
+    border-color: white;
+}
+.lt{
+
+    font-size: 25px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    border: 1px 1px;
+    
+    border-color: white;
+}
+#bt{
+    background-color: white;
+    font-size: 20px;
+    width: 320px;
+    height: 50px;
+}
+@media only screen and (max-device-width: 420px) {
+    body{
+    background-image: linear-gradient(to right,rgb(148, 148, 148));
+    } 
+    .card{
+        position: relative;
+        right: -39%;
+        top: 400px;
+        
+    }
+    .key{
+    font-size: 25px;
+    width: 700px;
+    height: 100px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    border: 1px 1px;
+    border-style: solid;
+    border-color: white;
+}
+.lt{
+
+    font-size: 58px;
+    margin: 2px;
+    color: rgb(0, 0, 0);
+    border: 1px 1px;
+    
+    border-color: white;
+}
+#bt{
+    background-color: white;
+    font-size: 65px;
+    width: 700px;
+    height: 200px;
+}   
+}
+    
+</style>
+<script type="text/javascript">
+function ver(){
+		var D0,M0,A0,D1,M1,A1,M2=0,DT;
+    
+
+    D0 = document.getElementById("txt1").value;
+    M0 = document.getElementById("txt2").value;
+    A0 = document.getElementById("txt3").value;
+
+    D1 = document.getElementById("txt4").value;
+    M1 = document.getElementById("txt5").value;
+    A1 = document.getElementById("txt6").value;
+
+
+    M0 = (M0*30) - (30-D0);
+
+    M1 = (M1*30) - (30-D1);
+
+    M2 = 365*(A1-A0);
+
+    DT = (M1+M2) - M0;
+
+    alert(DT)
+}
+	</script>
+<body>
+	<div class="card">
+         <h5 class="lt">DIA DE NASCIMENTO</h5>
+        <input class="key" id="txt1" type="text"/>
+        <h5 class="lt">MÊS DE NASCIMENTO</h5>
+        <input class="key" id="txt2" type="text"/>
+        
+        <h5 class="lt">ANO DE NASCIMENTO</h5>
+        <input class="key" id="txt3" type="text"/>
+        <h5 class="lt">DIA ATUAL</h5>
+        <input class="key" id="txt4" type="text"/>
+        
+        <h5 class="lt">MÊS ATUAL</h5>
+        <input class="key" id="txt5" type="text"/>
+        <h5 class="lt">ANO ATUAL</h5>
+        <input class="key" id="txt6" type="text"/>
+        <br>
+        <br>
+       
+        <button id="bt" onclick="ver()">Ver dias vividos</button>
+        </div>
+</body>
+</html>
